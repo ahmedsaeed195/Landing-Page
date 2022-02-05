@@ -1,0 +1,128 @@
+body {
+  background: rgb(176, 15, 48);
+  background: linear-gradient(
+    90deg,
+    rgba(176, 15, 48, 1) 0%,
+    rgba(97, 11, 77, 1) 100%
+  );
+  height: 100%;
+}
+
+/* navbar styles */
+
+#navbar {
+  background: black;
+  border-bottom: 1px solid rgb(70, 69, 69);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+.collapse {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#collapse-toggle {
+  display: none;
+}
+
+.collapse ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-inline-start: 0;
+  width: 100%;
+}
+
+.collapse ul li {
+  margin: 0 4rem;
+  margin-bottom: 2rem;
+}
+
+.collapse ul li a {
+  position: absolute;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+/** button hover animation */
+.collapse ul li a:hover {
+  transform: translate(-5px, -5px);
+  border: 1px solid rgb(176, 15, 48);
+  box-shadow: 2px 2px 2px 2px rgb(176, 15, 48);
+  background-color: #fff;
+  color: rgb(176, 15, 48);
+}
+
+/* keep the new style when active */
+.activeNav a {
+  transform: translate(-5px, -5px);
+  border: 1px solid rgb(176, 15, 48);
+  box-shadow: 2px 2px 2px 2px rgb(176, 15, 48);
+  background-color: #fff;
+  color: rgb(176, 15, 48) !important;
+}
+
+.show {
+  display: block !important;
+}
+
+/* main body styles */
+
+.main-body {
+  color: #fff;
+  margin-top: -1rem;
+}
+
+.main-body section {
+  padding: 4rem 2rem;
+  height: 100vh;
+}
+
+.main-body h1 {
+  font-size: 3rem;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  #navbar .container .collapse {
+    display: block !important;
+  }
+  #collapse-toggle {
+    display: block;
+    cursor: pointer;
+    stroke: white;
+    fill: white;
+  }
+  .collapse ul {
+    display: none;
+  }
+  .collapse ul li {
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+    width: fit-content;
+  }
+  .collapse ul li a {
+    position: relative;
+  }
+}
